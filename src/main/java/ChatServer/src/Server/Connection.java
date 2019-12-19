@@ -199,7 +199,7 @@ public class Connection implements Runnable {
 		}
 	}
 	
-	private void quit() {
+	protected void quit() {
 		switch(state) {
 			case STATE_REGISTERED:
 				//sendOverConnection("OK thank you for sending " + messageCount + " message(s) with the chat service, goodbye. ");
