@@ -11,17 +11,17 @@ import java.io.IOException;
 class ServerTest {
 
     public Server server;
-    @BeforeEach
+    @BeforeAll
     void runServer(){
         server = new Server(9000);
     }
 
-    @AfterEach
-    void quitServer() throws IOException {
-        server.finalize();
-    }
+    //@AfterEach
+    //void quitServer() throws IOException {
+       // server.finalize();
+    //}
     
-    @Test
+   @Test
    void anotherOne(){
        System.out.println("This is another one");
        System.out.printf("%b", server.c.isRunning());
