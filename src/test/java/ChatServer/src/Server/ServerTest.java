@@ -8,16 +8,17 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class ServerTest {
 
-    @Test
+    public volatile Server server;
+    @BeforeEach
     void runServer(){
-        Server server = new Server(9000);
+        server = new Server(9000);
     }
 
     @Test
    void anotherOne(){
        System.out.println("This is another one");
+       assertTrue(server.c.isRunning());
    }
-
     @Test
     void test2(){
         System.out.println("Thi is test 2");
