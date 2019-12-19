@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class ServerTest {
 
-    public volatile Server server;
+    public Server server;
     @BeforeEach
     void runServer(){
         server = new Server(9000);
