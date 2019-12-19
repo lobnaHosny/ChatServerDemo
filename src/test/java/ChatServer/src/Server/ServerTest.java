@@ -17,7 +17,7 @@ class ServerTest {
 
     @AfterEach
     void quitServer(){
-        server.c.quit();
+        server.finalize();
     }
     
     @Test
