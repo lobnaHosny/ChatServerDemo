@@ -2,6 +2,7 @@ package ChatServer.src.Server;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -9,11 +10,16 @@ import static org.junit.jupiter.api.Assertions.*;
 class ServerTest {
 
     public volatile Server server;
-    @Test
+    @BeforeEach
     void runServer(){
         server = new Server(9000);
     }
 
+    @AfterEach
+    void quitServer(){
+        server.c.quit();
+    }
+    
     @Test
    void anotherOne(){
        System.out.println("This is another one");
