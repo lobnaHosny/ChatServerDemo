@@ -16,7 +16,7 @@ class ServerTest {
     }
 
     @AfterEach
-    void quitServer(){
+    void quitServer() throws IOException {
         server.finalize();
     }
     
