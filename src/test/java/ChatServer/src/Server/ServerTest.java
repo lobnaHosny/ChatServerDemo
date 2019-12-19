@@ -8,22 +8,21 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class ServerTest {
 
-    private Server server;
     @Test
-    void init(){
-        server = new Server(9000);
+    void runServer(){
+        Server server = new Server(9000);
     }
 
     @Test
-    void test(){
-
-    }
-
+   void anotherOne(){
+       System.out.println("This is another one");
+   }
 
     @Test
     void test2(){
-        assertTrue(server.c.isRunning());
+        System.out.println("Thi is test 2");
     }
+
 
 
 }
